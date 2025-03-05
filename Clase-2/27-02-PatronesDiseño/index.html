@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singlenton</title>
+  <style>
+    
+    h1 {
+      color: brown;
+    }
+
+    button {
+      background-color:darkcyan;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tareas">
+    <h1>Lista de Tareas:</h1>
+    <ul id="lista-tareas"></ul>
+    <button id="btn">Agregar una tarea</button>
+  </div>
+</body>
+
+<script>
+
+/* Para aplicar el Singlenton en la vida real, usare una administrador de tareas 
+ya que se necesita una unica estancia (Administrador de tareas),para controlar 
+el acceso de datos (las tareas) evitando inconsistencias y duplicaciones*/
+
+    let tareas = [];
+    function agregarTarea() {
+      const tarea = prompt("¿Cual es la tarea?:");//ventana emergente para ingresar un valor
+      if (tarea) {
+        tareas.push(tarea); // Agrega la tarea al array
+        mostrarTareas();
+      }
+    }
+
+    function mostrarTareas() {
+      const lista = document.getElementById('lista-tareas');
+      lista.innerHTML = ""; // Limpiar la lista para evitar duplicados
+      tareas.forEach(tarea => {
+        const li = document.createElement('li');// crea un nuevo elemento de tipo <li>
+        li.textContent = tarea;
+        lista.appendChild(li);// agrega un nuevo elemento en <li>
+      });
+    }
+
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', agregarTarea);
+  </script>
+
+</html>

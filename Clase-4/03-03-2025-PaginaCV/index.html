@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi CV</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Mi información</a></li>
+                <li><a href="experiecia.html">Experiencia</a></li>
+                <li><a href="formacion.html">Formación</a></li>
+                <li><a href="datos.html">Datos curiosos</a></li>
+                <!-- Botón de cerrar sesión -->
+                <li><button id="logoutbtn" class="logoutbtn" style="display:none;">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="bienvenida">
+            <h1>Bienvenido a mi espacio digital</h1>
+            <p>¡Hola!</p>
+            <p>Soy Ana María Muñoz Jiménez, una apasionada de la tecnología y el desarrollo de software. Esta es mi Pagina Web donde te puedo decir mis experiencias, conocimientos y proyectos, acompañado en mi carrera profesional.</p>
+            <p>Explora y descubre más sobre mí, no dudes en ponerte en contacto si tienes alguna pregunta. ¡Gracias por visitar!</p>
+        </section>
+
+        <section class="main-content">
+            <!-- Mi información -->
+            <section class="info">
+                <h2>ANA MARIA MUÑOZ JIMÉNEZ</h2>
+                <h3>Desarrolladora de Software</h3>
+                <br>
+                <img src="img/foto.jpeg" alt="Fotografía personal">
+                <br>
+                <h3>Descripción:</h3>
+                <p>Recientemente egresada de la carrera de Ingeniería en Desarrollo y Gestión de Software. Con conocimientos en HTML, JavaScript y MySQL, y experiencia práctica a través de estadías universitarias. Capaz de trabajar en equipo, comprometida con el aprendizaje continuo y el desarrollo personal, en búsqueda de ampliar mis habilidades y adquirir nuevos conocimientos.</p>
+            </section>
+    
+            <!-- Mis proyectos -->
+            <section class="proyectos">
+                <h2>Mis proyectos</h2>
+                <p>GitHub:&nbsp; <a href="https://github.com/Ana-MJ">Ana-MJ</a></p>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        // Verificar si el usuario está logueado y muestra el botón de cerrar sesión
+        if (localStorage.getItem('loggedIn') === 'true') {
+            document.getElementById('logoutbtn').style.display = 'inline-block';
+        }
+
+        // cerrar sesión
+        document.getElementById("logoutbtn").addEventListener("click", function() {
+            // Eliminamos el estado de sesión de localStorage
+            localStorage.removeItem('loggedIn');
+            // al cerrar sesion se redirige otra vez al login
+            window.location.href = "login.html";
+        });
+    </script>
+
+</body>
+</html>

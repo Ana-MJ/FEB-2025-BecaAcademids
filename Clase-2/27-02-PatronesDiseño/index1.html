@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory</title>
+    <style>
+        button {
+            background-color:darkgray;
+            color: black;
+            padding: 15px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Fábrica de Panes</h1>
+    <p>Tipos de panes:</p>
+    <div id="panes"></div>
+    <br>
+
+    <button id="btn">Ver pan</button>
+</body>
+
+<script>
+
+/* Para aplicar el Factory en la vida real, usare de ejmeplo una Fabrica de Pan,  
+si quiero solo un tipo de pan pido el tipo de pan y la panadería (la fábrica) 
+me lo da listo para llevar.*/
+
+    function crearPan(tipo) {
+        return `Es un pan de `+ tipo;
+    }
+
+    function mostrarPanes() {
+        const panesDiv = document.getElementById('panes');
+        const tiposDePan = ['molde', 'feria', 'dulce'];
+
+        tiposDePan.forEach(tipo => {
+            const pan = crearPan(tipo); // crea el pan usando la fábrica
+            const div = document.createElement('div');
+            div.textContent = pan; // muestras el texto del pan
+            panesDiv.appendChild(div); // lo muestra en la página
+        });
+    }
+
+    document.getElementById('btn').addEventListener('click', mostrarPanes);
+</script>
+</html>

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(160, 157, 157);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* flex-direction: column; hace que los elementos se apilen verticalmente dentro de un contenedor flex. */
+    align-items: center;
+}
+
+/* Barra de navegación */
+header {
+    background-color: black;
+    padding: 10px 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* flex-direction: column; hace que los elementos se apilen verticalmente dentro de un contenedor flex. */
+    gap: 15px; /* Reduce el espacio entre secciones */
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Contenedor de info y proyectos */
+.main-content {
+    display: flex;
+    gap: 15px; /* Reduce el espacio entre info y proyectos */
+}
+
+.bienvenida p,
+.info-text p,
+.proyectos p {
+    text-align: justify;
+}
+
+/* Información personal */
+.info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 2; /* Flexbox (propiedad que se usa dentro de un contenedor flexible) Ocupa menos espacio que la info */
+}
+
+.info img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+/* Proyectos */
+.proyectos {
+    background-color: #fff;
+    padding: 20px;
+    max-height: 80px;
+    border-radius: 8px;
+    flex: 1; /* Flexbox (propiedad que se usa dentro de un contenedor flexible) Ocupa menos espacio que la info */
+}
+
+.logoutbtn {
+    background-color: #620505;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}

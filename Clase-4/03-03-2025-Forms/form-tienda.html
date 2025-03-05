@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Prodcutos</title>
+    <style>
+        form {
+            background:rgb(251, 211, 135);
+            padding: 15px;
+            border-radius: 5px;
+            width: 400px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px;
+            background-color:cornflowerblue;
+            color: white;
+            border-radius: 5px;
+        }
+        th {
+            background-color:cadetblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form  id="formProducto" action="" method="POST">
+        <label for="producto">Producto:</label>
+        <input id="producto" name="producto" required type="text">
+        <br><br>
+    
+        <label for="precio">Precio:</label>
+        <input id="precio" name="precio" type="text" required>
+        <br><br>
+    
+        <label for="description">Descripción:</label>
+        <br>
+        <textarea id="description" name="description"></textarea>
+        <br><br>
+    
+        <label for="opciones">Disponibilidad:</label>
+        <select name="opciones" id="opciones" required>
+            <option selected disabled value="">Selecciona la opcion</option>
+            <option value="disponible">Disponible</option> 
+            <option value="agotado">Agotado</option>
+            <option value="almacen">Almacen</option>
+        </select>
+        <br><br>
+    
+        <button type="submit">Guardar</button>
+    </form>
+
+    <h2>Productos de una tienda</h2>
+    <table border="1">
+        <tr>
+            <th colspan="5" style="text-align: center; background-color: lightblue; color: black;">LISTA DE PRODUCTOS</th>
+        </tr>
+        <tr>
+            <!--Header-->
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+            <th>Disponibilidad</th>
+        </tr>
+        <tbody id="tablaProductos">
+            <!-- Celdas -->
+            <tr>
+                <td>Botella de agua</td>
+                <td>$12.00</td>
+                <td>Agua mineral en botella de 500 ml</td>
+                <td style="color: green;">Disponible</td>
+            </tr>
+            <tr>
+                <td>Doritos Nacho</td>
+                <td>$18.00</td>
+                <td>Bolsa de 150 g de Doritos sabor Nacho</td>
+                <td style="color: green;">Disponible</td>
+            </tr>
+            <tr>
+                <td>Caja de Té de Manzanilla</td>
+                <td>$26.00</td>
+                <td>Caja con 20 bolsitas de té de manzanilla</td>
+                <td style="color: red; font-weight: bolder;">Agotado</td>
+            </tr>
+            <tr>
+                <td>Galletas María</td>
+                <td>$20.00</td>
+                <td>Paquete de galletas María, 200 g</td>
+                <td style="color: green;">Disponible</td>
+            </tr>
+            <tr>
+                <td>Pepsi</td>
+                <td>$15.00</td>
+                <td>Botella de 600 ml</td>
+                <td style="color: green;">Disponible</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    const form = document.getElementById("formProducto");
+    const tablaProductos = document.getElementById("tablaProductos");
+
+    // Formulario
+    form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita recargar la pagina del formulario
+
+            // valores del formulario
+            const producto = document.getElementById("producto").value;
+            const precio = document.getElementById("precio").value;
+            const description = document.getElementById("description").value;
+            const opciones = document.getElementById("opciones").value;
+
+            // createElement para crear una nueva fila y celda en la tabla
+            const nuevaFila = document.createElement("tr");
+
+            const celdaProducto = document.createElement("td");
+            const celdaPrecio = document.createElement("td");
+            const celdaDescripcion = document.createElement("td");
+            const celdaDisponibilidad = document.createElement("td");
+
+            celdaProducto.textContent = producto;
+            celdaPrecio.textContent = "$" + precio;
+            celdaDescripcion.textContent = description;
+
+                if (opciones === "disponible") {
+                    celdaDisponibilidad.textContent = "Disponible";
+                    celdaDisponibilidad.style.color = "green";
+                } else if (opciones === "agotado") {
+                    celdaDisponibilidad.textContent = "Agotado";
+                    celdaDisponibilidad.style.color = "red";
+                    celdaDisponibilidad.style.fontWeight = "bolder";
+                } else if (opciones === "almacen") {
+                    celdaDisponibilidad.textContent = "Almacen";
+                    celdaDisponibilidad.style.color = "orange";
+                }
+
+            // .appendChild se usara para agregar un nuevo elemento hijo dentro de otro elemento padre en el DOM
+            tablaProductos.appendChild(nuevaFila);
+            
+            nuevaFila.appendChild(celdaProducto);
+            nuevaFila.appendChild(celdaPrecio);
+            nuevaFila.appendChild(celdaDescripcion);
+            nuevaFila.appendChild(celdaDisponibilidad);
+
+                form.reset();
+        });
+</script>
+</html>

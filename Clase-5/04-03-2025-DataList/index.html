@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buscador DATALIST</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Logo -->
+        <img src="google.png" alt="Google logo" class="logo">
+
+            <!-- Barra de navegación simplificada -->
+        <div class="google-navbar">
+            <a href="https://mail.google.com/mail/" class="navbar-link" target="_top">Gmail</a>
+            <a href="https://www.google.com.mx/imghp" class="navbar-link" target="_top">Imágenes</a>
+        </div>
+
+        <!-- Barra de Búsqueda -->
+        <div class="buscador-container">
+            <input list="sugerencias" id="buscar" name="buscar" placeholder="Busca en Google...">
+            <button class="btn" id="btn">🔍</button>
+            <datalist id="sugerencias">
+                <option value="Elden Ring">
+                <option value="The Legend of Zelda: Tears of the Kingdom">
+                <option value="Final Fantasy VII Rebirth">
+                <option value="Cyberpunk 2077 Phantom Liberty">
+                <option value="Hollow Knight: Silksong">
+                <option value="Resident Evil 4 Remake">
+                <option value="God of War Ragnarök">
+                <option value="GTA VI noticias">
+                <option value="Mejores RPGs de 2025">
+                <option value="Tendencias en eSports">
+            </datalist>
+
+            <!-- Botones -->
+            <div class="button-container">
+                <button class="search-btn" id="search-btn">Buscar con Google</button>
+                <button class="lucky-btn" id="lucky-btn">Voy a tener suerte</button>
+            </div>
+        </div>
+
+         <!-- Footer -->
+         <div class="footer">
+            <div class="footer-links">
+                <a href="https://about.google/" target="_blank">Sobre Google</a>
+                <a href="https://www.google.com.mx/intl/es-419_mx/ads/" target="_blank">Publicidad</a>
+                <a href="https://www.google.com.mx/services/" target="_blank">Negocios</a>
+                <a href="https://google.com/search/howsearchworks/" target="_blank">Cómo funciona la Búsqueda</a>
+                <a href="https://policies.google.com/privacy?hl=es-419" target="_blank">Privacidad</a>
+                <a href="https://policies.google.com/terms?hl=es-419" target="_blank">Condiciones</a>
+            </div>
+        </div>
+
+    </body>
+    <script src="script.js"></script>
+</html>

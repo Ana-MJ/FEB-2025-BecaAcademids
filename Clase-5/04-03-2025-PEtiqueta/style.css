@@ -1,0 +1,222 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;  /* Fondo negro */
+    color: white;  /* Texto blanco para contraste */
+    margin: 0;
+    padding: 0;
+}
+
+h1,h4 {
+    color: white;  /* Texto blanco en encabezados */
+}
+
+h2, h3{
+    color: black;
+}
+
+/* Encabezado */
+header {
+    background-color: #121212;  /* Fondo negro */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra sutil */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+/* Sección de bienvenida */
+#home {
+    padding: 40px 20px;
+    background-color: white;  /* Gris oscuro */
+    text-align: center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+#home img {
+    max-width: 500%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+#home figcaption {
+    font-style: italic;
+    margin-top: 15px;
+    color: black;  /* Gris claro */
+}
+
+/* Estilos del menú */
+#menu table {
+    width: 70%;
+    margin: 40px auto;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: white;  /* Fondo negro */
+}
+
+#menu th, #menu td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #444;  /* Gris oscuro */
+}
+
+#menu th {
+    background-color: #800000;  /* Vino */
+    color: white;
+}
+
+#menu td {
+    background-color: #1f1f1f;  /* Gris oscuro */
+    color: white;
+}
+
+/* Estilo de botones y formularios */
+button {
+    background-color: #800000;  /* Vino */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.no-style {
+    background: burlywood; /* Sin fondo */
+    color: inherit; /* Hereda el color del texto */
+    padding: 0; /* Sin relleno */
+    cursor: pointer; /* Aparece como botón */
+    border-radius: 5px;
+}
+
+form {
+    background-color: #1f1f1f;  /* Gris oscuro */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+select, textarea {
+    width: 20%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+}
+
+input {
+    width: 30%;  /* Restablecido el ancho al 30% */
+    padding: 12px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+}
+
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;  /* Gris claro */
+}
+
+fieldset {
+    border: 2px solid #800000;  /* Vino */
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #1f1f1f;  /* Gris oscuro */
+}
+
+/* Sección de contacto */
+#contact {
+    padding: 40px 20px;
+    background-color: white;  /* Fondo negro */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact form {
+    background-color: #800000;  /* Vino */
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #121212;  /* Fondo negro */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 40px;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos de detalles y meter */
+details {
+    background-color: #1f1f1f;  /* Gris oscuro */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+meter {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Estilo del diálogo */
+#orderDialog {
+    padding: 20px;
+    background-color: #800000;  /* Vino */
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#extraContent {
+    margin-top: 40px;
+}
+
+/* Estilo para el template */
+template {
+    display: none;
+}

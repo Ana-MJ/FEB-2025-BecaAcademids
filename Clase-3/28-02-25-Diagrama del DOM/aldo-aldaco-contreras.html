@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Página Completa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Bienvenidos a Mi Página Web</h1>
+        <p>Explora el contenido y conoce más sobre nuestros productos y servicios.</p>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#about">Acerca de</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <!-- Sección Principal -->
+    <main>
+        <!-- Sección Acerca de -->
+        <section id="about">
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos una empresa dedicada a ofrecer soluciones innovadoras en tecnología y diseño. Nuestra misión es mejorar la vida de nuestros clientes a través de productos de alta calidad.</p>
+        </section>
+
+        <!-- Galería de Imágenes -->
+        <section class="gallery">
+            <h2>Galería</h2>
+            <div class="grid-container">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen 1">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen 2">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen 3">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen 4">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen 5">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen 6">
+            </div>
+        </section>
+
+        <!-- Tabla de Precios -->
+        <section id="services">
+            <h2>Servicios y Precios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Consultoría</td>
+                        <td>Asesoramiento especializado en tecnología y diseño.</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Desarrollo Web</td>
+                        <td>Creación de sitios web a medida y optimizados.</td>
+                        <td>$500</td>
+                    </tr>
+                    <tr>
+                        <td>Diseño Gráfico</td>
+                        <td>Diseño de identidad corporativa y material visual.</td>
+                        <td>$300</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 Mi Página Web | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
