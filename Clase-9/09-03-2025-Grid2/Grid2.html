@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero Kanban</title>
+    <link rel="stylesheet" href="Grid2.css">
+</head>
+<body>
+    <div class="left-container">
+        <!-- Barra 1 -->
+        <nav class="barra-blue">
+            <ul>
+                <li><a href="#"><img src="img/ijira.avif" alt="Icono 1" style="height: 50px; width: 50px;"></a></li>
+                <li><a href="#"><img src="img/lupa.png" alt="Icono 2"></a></li>
+                <li><a href="#"><img src="img/anadir.png" alt="Icono 3"></a></li>
+                <li><a href="#"><img src="img/pregunta.png" alt="Icono 4"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Barra 2 -->
+        <section class="barra-gray">
+            <figure>
+                <img src="img/cohete.png" alt="Icono Principal">
+                <div>
+                    <h3>Teams in Space</h3>
+                    <p>Software project</p>
+                </div>
+            </figure>
+            <br>
+            <section class="buttons">
+                <button>Blacklog</button>
+                <button>Board</button>
+                <button>Reports</button>
+                <button>Releases</button>
+                <button>Componets</button>
+                <button>Issues</button>
+                <button>Repository</button>
+                <button>Add item</button>
+                <button>Settings</button>
+            </section>
+        </section>
+    </div>
+
+    <!-- Contenido -->
+    <main>
+        <header>
+            <h1>Board</h1>
+            <input class="search" placeholder="🔍">
+            <input type="list" placeholder="Quick Filtters &nbsp; &#9660;" style="border: none;"></input>
+        </header>
+
+        <section class="board">
+            <section class="column1">
+                <h3>TO DO</h3>
+                <article class="card">
+                    <p>Engage Jupiter Express for outer solar system travel</p>
+                    <p class="suby">SPACE TRAVEL PARTNERS</p>
+                </article>
+                <article class="card">
+                    <p>Create 90 day plans for all departaments in the Mars Office</p>
+                    <p class="subo">Local Mars Office</p>
+                </article>
+                <article class="card">
+                    <p>Engage Saturn's Rings Resort as a preferred provider</p>
+                    <p class="suby">SPACE TRAVEL PARTNERS</p>
+                </article>
+                <article class="card">
+                    <p>Speedy SpaceCraft as the prederred</p> 
+                    <p class="subc">SEESPACEEZ PLUS</p>
+                </article>
+            </section>
+
+            <section class="column2">
+                <h3>IN PROGRESS</h3>
+                <article class="card">
+                    <p>Requesting avaliable flights is now taking > 5 seconds</p>
+                    <p class="subc">SEESPACEEZ PLUS</p>
+                </article>
+                <article class="card">
+                    <p>Engage Saturn Shuttle Lines for group tours</p>
+                    <p class="suby">SPACE TRAVEL PARTNERS</p>
+                </article>
+                <article class="card">
+                    <p>Establish a catering vendor to preovide meal service</p>
+                    <p class="subo">Local Mars Office</p>
+                </article>
+                <article class="card">
+                    <p>Engage Saturn Shuttle Lines for group tours</p>
+                    <p class="suby">SPACE TRAVEL PARTNERS</p>
+                </article>
+            </section>
+
+            <section class="column3">
+                <h3>CODE REVIEW</h3>
+                <article class="card">
+                    <p>Register with the Mars Ministry of Revenue</p>
+                    <p class="subo">Local Mars Office</p>
+                </article>
+                <article class="card">
+                    <p>Draft network plan for Mars Office</p> 
+                    <p class="subo">Local Mars Office</p>
+                </article>
+            </section>
+
+            <section class="column4">
+                <h3>DONE</h3>
+                <article class="card">
+                    <p>Homepage footer uses an inline style-should use a class</p>
+                    <p class="subp" style="color: white;">Large Team Support</p>
+                </article>
+                <article class="card">
+                    <p>Engage JetShuttle SpaceWays for travel</p>
+                    <p class="suby">SPACE TRAVEL PARTNERS</p>
+                </article>
+                <article class="card">
+                    <p>Engage Saturn Shuttle Lines for group tours</p>
+                    <p class="suby">SPACE TRAVEL PARTNERS</p>
+                </article>
+                <article class="card">
+                    <p>Establish a catering vendor to provide meal service</p>
+                    <p class="subo">Local Mars Office</p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+</body>
+</html>

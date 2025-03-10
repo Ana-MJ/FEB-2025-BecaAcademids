@@ -1,0 +1,20 @@
+.container{
+    display: grid;
+    background-color: tomato;
+    height: 500px;
+    grid-template-columns: repeat(4, 100px); /* numericos (px, rem, fr, vw, vh) */
+    justify-items: center;  /* dentro de sus columnas */
+    justify-content: center; /* columna completa */
+    align-items: center; /* alinea de forma vetical */
+    grid-template-rows: repeat(4, 100px);
+}
+
+.item {
+    background-color: #ddd;
+    border: 1px solid black;
+}
+
+.container > :first-child {
+    grid-column: 1 / 3; /* abacar la columna 1 y 2, indica de donde a donde abarca un item*/
+    grid-row: 2 / 4; /* abarca respecto a los renglones  2 y 3 */
+}

@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+article {
+    width: 310px;
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;  /* Evita que los artículos se encojan */
+    height: 380px;  
+}
+
+.sedan { background-color: hsl(31, 77%, 52%); }
+.suv { background-color: hsl(184, 100%, 22%); }
+.luxury { background-color: hsl(179, 100%, 13%); }
+
+header img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: 'Big Shoulders Display', sans-serif;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+footer a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: hsl(0, 0%, 95%);
+    color: black;
+    text-decoration: none; /* elimina el subrayado de enlaces*/
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+    
+    article {
+        width: 320px;
+        border-radius: 0;
+    }
+
+    /* selector pseudo clase */
+    /* Aplica bordes redondeados solo en el lado izquierdo del primer artículo. */
+    article:first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    /* Aplica bordes redondeados solo en el lado derecho del último artículo. */
+    article:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+}

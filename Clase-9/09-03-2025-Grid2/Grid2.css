@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+.left-container {
+    display: flex;
+    height: 100vh;
+    position: fixed;
+}
+
+/* Barra azul */
+.barra-blue {
+    background: #1c54e4;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.barra-blue ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* pseudo clase*/
+.barra-blue ul li:nth-child(4) {
+    margin-top: 400px; /* aplica el estilo solo al 4 elemento */
+}
+
+.barra-blue ul li a img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Barra gris */
+.barra-gray {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ecebeb;
+    width: 245px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 100vh;
+}
+
+
+.barra-gray figure {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.barra-gray figure img {
+    width: 50px;
+    height: 50px;
+}
+
+.barra-gray figure div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #ecebeb;
+    color: grey;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.buttons button:hover {
+    background: #cdcccc;
+    color: blue;
+}
+
+
+main {
+    margin-left: 325px;
+    padding: 20px;
+    min-width: 600px;
+}
+
+
+main header {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: auto;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+main header h1 {
+    font-size: 2em;
+    grid-column: span 2; /* ocupara 2 columnas */
+    margin-bottom: 10px;
+}
+
+main .search {
+    background: #ecebeb;
+    border: none;
+    text-align: right;
+}
+
+main header input {
+    padding: 10px;
+    width: 200px;
+}
+
+/* Tablero */
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.column1, .column2, .column3, .column4 {
+    background: #ecebeb;
+    padding: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: grey;
+}
+
+
+.card {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    margin: 5px 0;
+    color: black;
+}
+
+.suby {
+    font-size: 12px;
+    background-color: rgb(255, 225, 0);
+    
+}
+
+.subo {
+    font-size: 12px;
+    background-color: rgb(255, 191, 0);
+    
+}
+
+.subc {
+    font-size: 12px;
+    background-color: rgb(0, 242, 255);
+}
+
+.subp {
+    font-size: 12px;
+    background-color: rgb(123, 0, 255);
+    
+}

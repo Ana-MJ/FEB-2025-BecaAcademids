@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: black;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            top: 0;
+        }
+        .container{
+            /*minimas basicas*/
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items:start;
+            gap: 50%; /* % , px, vh, vw, rem (16px = 1rem), em */
+            flex-wrap: wrap; /* evita el desborde del contenido */
+
+            width: 100%;
+            height: 500px;
+            background-color: brown;
+            /*flex-shrink:initial;*/
+
+        }
+        .container * {
+            background-color: blue;
+        }
+        /*#item1  {
+            flex-grow: 2;
+            flex-basis: 100px;
+            align-self: stretch;
+        } 
+        #item2  {
+            flex-grow: 1;
+            flex-basis: 100px;
+        }*/
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <section class="container">
+        <article id="item1">A</article>
+        <article id="item2">B</article>
+        <article>C</article>
+        <article>D</article>
+    </section>
+</body>
+    <script src="index.js"></script>
+</html>

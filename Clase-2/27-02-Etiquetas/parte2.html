@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizacion parte 2</title>
+</head>
+<body>
+    <!-- <param> Define un parámetro para un objeto -->
+    <object data="movie.swf" type="application/x-shockwave-flash" width="300" height="200">
+        <param name="autoplay" value="true">
+        <param name="loop" value="true">
+    </object>
+
+    <!-- <map> Define un mapa de imagen -->
+    <h3>Mapa de Imagen</h3>
+    <img src="img/carta.jpg" width="500" height="281" usemap="#imagen-mapa" alt="Mapa de Imagen">
+    <map name="imagen-mapa">
+        <area shape="rect" coords="34,44,270,350" href="https://www.ejemplo.com" alt="Zona 1" target="_blank">
+        <area shape="circle" coords="400,150,50" href="https://www.ejemplo2.com" alt="Zona 2" target="_blank">
+    </map>
+
+    <!-- <progress> Define una barra de progreso -->
+    <h3>Barra de Progreso</h3>
+    <progress value="70" max="100"></progress> 70% completado.
+
+    <!-- <meter> Define un valor escalar dentro de un rango conocido -->
+        <h3>Medidor</h3>
+        <meter value="0.6" min="0" max="1" low="0.2" high="0.8" optimum="0.6"></meter>
+    
+        <!-- <code> Define un fragmento de código -->
+        <h3>Código de Computadora</h3>
+        <p>El siguiente es un fragmento de código HTML:</p>
+        <pre><code>&lt;h1&gt;Este es un título&lt;/h1&gt;</code></pre>
+    
+        <!-- <kbd> Define texto de teclado -->
+        <h3>Texto de Teclado</h3>
+        <p>Para copiar, presiona <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+    
+        <!-- <samp> Define la salida de una muestra o ejemplo de un programa -->
+        <h3>Salida de un Programa</h3>
+        <p>La salida del programa fue: <samp>Éxito</samp>.</p>
+    
+        <!-- <var> Define una variable dentro de un texto -->
+        <h3>Ejemplo de Variable</h3>
+        <p>El valor de la variable <var>x</var> es 10.</p>
+
+
+        <!-- Etiquetas para formularios -->
+         <!-- <form> Crea un formulario HTML -->
+    <h3>Formulario de Contacto</h3>
+    <form action="https://www.ejemplo.com/enviar" method="POST" target="_blank">
+
+        <!-- <fieldset> Agrupa elementos relacionados dentro del formulario -->
+        <fieldset>
+            <legend>Información Personal</legend>
+            
+            <!-- <label> Define una etiqueta para un elemento de formulario -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required autofocus>
+
+            <br><br>
+            <!-- <label> Define una etiqueta para un elemento de formulario -->
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Introduce tu correo" required>
+    
+                <br><br>
+    
+                <!-- <textarea> Define un área de texto para entrada de datos -->
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje aquí" required></textarea>
+    
+            </fieldset>
+    
+            <br>
+        <!-- <fieldset> Agrupa elementos relacionados dentro del formulario -->
+                <fieldset>
+                    <legend>Preferencias</legend>
+                    
+                    <!-- <label> Define una etiqueta para un elemento de formulario -->
+                    <label for="newsletter">Suscribirse al boletín:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="sí">
+                    <br><br>
+        
+                    <!-- <select> Define una lista desplegable -->
+                    <label for="pais">Selecciona tu país:</label>
+                    <select id="pais" name="pais" required>
+                        <option value="mexico">México</option>
+                        <option value="españa">España</option>
+                        <option value="argentina">Argentina</option>
+                    </select>
+                    <br><br>
+
+                    <!-- <label> Define una etiqueta para un elemento de formulario -->
+            <label for="metodo">Método de pago:</label>
+            <select id="metodo" name="metodo" required>
+                <option value="tarjeta" selected>Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- <input> Define un campo de entrada -->
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h3>Formulario de Registro</h3>
+    <form action="https://www.ejemplo.com/registrar" method="POST">
+        
+        <!-- <fieldset> Agrupa elementos dentro del formulario -->
+        <fieldset>
+            <legend>Información de Usuario</legend>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+            <br><br>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Escribe tu correo" required>
+            <br><br>
+
+            <!-- <input type="radio"> Define un botón de radio -->
+            <label for="genero">Género:</label>
+            <input type="radio" id="masculino" name="genero" value="masculino" required>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label>
+            <br><br>
+
+            <!-- <input type="checkbox"> Define una casilla de verificación -->
+            <label for="aceptar">Aceptar términos y condiciones:</label>
+            <input type="checkbox" id="aceptar" name="aceptar" value="sí" required>
+            <br><br>
+
+            <!-- <select> con <optgroup> para agrupar opciones -->
+            <label for="pais">Selecciona tu país:</label>
+            <select id="pais" name="pais" required>
+                <optgroup label="América">
+                    <option value="mexico">México</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="colombia">Colombia</option>
+                </optgroup>
+                <optgroup label="Europa">
+                    <option value="españa">España</option>
+                    <option value="francia">Francia</option>
+                    <option value="alemania">Alemania</option>
+                </optgroup>
+            </select>
+            <br><br>
+
+            <!-- <input type="submit"> Define un botón de envío de formulario -->
+            <input type="submit" value="Registrar">
+            
+            <!-- <input type="reset"> Define un botón para restablecer el formulario -->
+            <input type="reset" value="Restablecer">
+            
+            <!-- <input type="hidden"> Define un campo oculto -->
+            <input type="hidden" name="registro_id" value="12345">
+        </fieldset>
+
+        <!-- <button> Define un botón de formulario -->
+        <button type="button" onclick="alert('¡Gracias por tu registro!')">Hacer clic</button>
+
+        <!-- <datalist> Define una lista de opciones predefinidas para un campo de entrada -->
+        <label for="color">Selecciona un color:</label>
+        <input list="colores" name="color" id="color">
+        <datalist id="colores">
+            <option value="Rojo">
+            <option value="Verde">
+            <option value="Azul">
+            <option value="Amarillo">
+        </datalist>
+
+    </form>
+</body>
+</html>

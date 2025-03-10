@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario por Pasos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="barra-lateral">
+            <ul>
+                <li id="p1" class="active"><span class="numero">1</span> Información</li>
+                <li id="p2"><span class="numero">2</span> Plan</li>
+                <li id="p3"><span class="numero">3</span> Adicional</li>
+                <li id="p4"><span class="numero">4</span> Resumen</li>
+            </ul>
+        </div>
+        <div class="form-contenedor">
+
+            <!-- Paso 1: Información Personal -->
+            <div id="paso1">
+                <h2>Info Personal</h2>
+                <p>Por favor ingresa tu nombre, correo y número de teléfono.</p>
+                <form id="form1">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" placeholder="ej. Juan Perez" required>
+
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="ej. perez@lorem.com" required>
+
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" placeholder="ej. +52 234 567 890" required>
+
+                    <button type="button" id="nextP1">Siguiente</button>
+                </form>
+            </div>
+
+            <!-- Paso 2: Plan -->
+            <div id="paso2">
+                <h2>Elije tu plan</h2>
+                <p>Selecciona el plan que más se ajuste a tus necesidades.</p>
+                <form id="form2">
+                    <label for="plan">Plan</label>
+                    <select id="plan" required>
+                        <option value="arcade">Arcade $9/mo</option>
+                        <option value="avanzado">Avanzado $12/mo</option>
+                        <option value="pro">Pro $15/mo</option>
+                    </select>
+                    <button type="button" id="nextP2">Siguiente</button>
+                </form>
+            </div>
+
+            <!-- Paso 3: Opciones Adicionales -->
+            <div id="paso3">
+                <h2>Opciones Adicionales</h2>
+                <p>Mejora tu experiencia de juego</p>
+                <form id="form3">
+                    <label for="extra">Servicios adicionales</label>
+                    <input type="checkbox" id="extra" name="extra" value="online"> Servicios en línea
+                    <p>Juegos Multijugador</p> 
+                    <input type="checkbox" id="extra2" name="extra2" value="almacenamiento"> Más almacenamiento
+                    <p>1TB extra</p>
+                    <input type="checkbox" id="extra3" name="extra3" value="personalizado"> Personalizado
+                    <p>Personaliza tu perfil</p>
+                    <button type="button" id="nextP3">Siguiente</button>
+                </form>
+            </div>
+
+            <!-- Paso 4: Resumen -->
+            <div id="paso4">
+                <h2>Resumen</h2>
+                <p>Revisa toda la información antes de finalizar el proceso.</p>
+                <div id="resumen">
+                    <!-- Aquí estara el resumen con la información ingresada en el formulario. -->
+                </div>
+                <br>
+                <button type="submit" id="final">Confirmar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <h2>¡Felicidades!</h2>
+            <p>Terminaste el formulario.</p>
+            <button id="cerrarModal">Cerrar</button>
+        </div>
+    </div> 
+
+</body>
+    <script src="script.js"></script>
+</html>

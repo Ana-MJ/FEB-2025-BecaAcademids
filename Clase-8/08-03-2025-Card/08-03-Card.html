@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="stylesheet" href="Card.css">
+</head>
+<body>
+
+  <article class="card">
+    <section class="card__content">
+        <figure class="card__image-container">
+            <img class="card__image" src="imgB/image-equilibrium.jpg" alt="Equilibrium #3429">
+            <figcaption class="card__overlay">
+              <img class="card__icon" src="imgB/icon-view.svg" alt="View Icon">
+          </figcaption>
+        </figure>
+        
+        <section class="card__text">
+            <h1 class="card__title">Equilibrium #3429</h1>
+            <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
+            
+            <section class="card__details">
+              <article class="card__price">
+                <img src="imgB/icon-ethereum.svg" alt="ETH">
+                <span class="card__price-value">0.041 ETH</span>
+              </article>
+              <article class="card__time">
+                <img src="imgB/icon-clock.svg" alt="clock">
+                <time class="card__time-left" datetime="2025-03-11">3 days left</time>
+              </article>            
+            </section>
+
+            <hr class="card__divider" />
+            
+            <footer class="card__footer">
+                  <img class="card__profile" src="imgB/image-avatar.png" alt="profile-avatar">
+                  <p class="card__creator">
+                    Creation of <a href="#" class="card__link">Jules Wyvern</a>
+                </p>
+            </footer>
+        </section>
+    </section>
+  </article>
+
+</body>
+</html>

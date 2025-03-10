@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Estilo de letra */
+}
+
+body {
+    background-color: #eef5ff;
+    display: flex; /* organizar los elementos dentro de un contenedor de manera más eficiente y flexible */
+    justify-content: center; /* Mueve el contenido al centro de la pantalla horizontalmente (de lado a lado) */
+    align-items: center; /* Mueve el contenido al centro de la pantalla verticalmente (de arriba a abajo) */
+}
+
+.contenedor {
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.barra-lateral {
+    background-color: #4d5eff;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 30%;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.barra-lateral li {
+    margin: 20px 0;
+    opacity: 0.6;
+    font-size: 18px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+
+.barra-lateral .active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.form-contenedor {
+    padding: 40px;
+    width: 70%;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: gray;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* para apilar los elementos verticalmente (de arriba a abajo) en lugar de alinearse horizontalmente */
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Si tienes algo como párrafos, imágenes o cajas, y quieres que cada uno ocupe su propia línea, 
+    usas display: block; para que se apilen uno debajo del otro 
+    (en este caso se aplican para los campos del formulario asegurando que cada uno se vea claro y separado) */
+form input, form select {
+    display: block; 
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #00274e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* especifico para el cambio de este input "checkbox" */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#resumen{
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* ocultar el div cuando la página se carga inicialmente*/
+#paso2 {
+    display: none;
+}
+
+#paso3 {
+    display: none;
+}
+
+#paso4 {
+    display: none;
+}
+
+#final {
+    background-color: #8d01c0; /* Azul brillante */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal {
+    display: none; /* Oculto al inicio */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#cerrarModal {
+    background-color: #ff5c5c; /* Rojo para el botón de cerrar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
