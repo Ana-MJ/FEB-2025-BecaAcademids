@@ -1,0 +1,55 @@
+let carro = 'BMW'; //tokes let, carro, =, 'BMW'
+let carro = 'BMW' //caracteres de control de formato (; \n \r)
+let    carro =    'BMW'; //espacios en blanco, no importa 
+                        /** *
+                         * comentarios multi linea
+                         */
+                        //una liena de comentarios
+let persona = 'Aldo';   //Statement => expressions
+let persona = 'Aldo';    // Expressions 'Aldo'
+
+true //boolean
+'string' //string
+10 //number
+{nombre:'Aldo'} //object 
+[{nombre: 'Aldo'}] //array
+
+
+function obtenerNombre(){
+    return 'Aldo'; //expression (string, numero, booleado, funciones)
+}
+
+// VARIABLES
+function miFuncion(){
+    var  dinero = 5; //declaracion = 'var dinero', asignacion = '=5'
+    dinero = 10;
+    var dinero;
+    console.log(dinero);
+}
+
+miFuncion();
+var dinero; //scope es window, ensucia el scope (window) objeto global (window)
+            // scope => desde donde es accesible esa variable declarada.
+console.log(dinero);
+
+let juan = 'Juan'; //transpilacion => babel
+
+//bloque de codigo 
+{ 
+    let juan;
+    juan = 'Juan'
+    console.log(juan);
+}
+
+console.log(juan);
+
+function saludar (){
+    let nombre = 'aldo';
+    console.log('Hola' + nombre);
+}
+
+console.log(window.nombre); //ReferenceError , no existe en ese scope
+
+cosnt PI = 3.1416; 
+const EULER;       //no se puede declarar vacia
+cosnt EULER = 1.34;

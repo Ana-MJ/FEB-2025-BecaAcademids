@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablero Kanban</title>
+    <title>Jira</title>
     <link rel="stylesheet" href="Grid2.css">
 </head>
 <body>
@@ -23,21 +23,21 @@
             <figure>
                 <img src="img/cohete.png" alt="Icono Principal">
                 <div>
-                    <h3>Teams in Space</h3>
+                    <h3><strong>Teams in Space</strong></h3>
                     <p>Software project</p>
                 </div>
             </figure>
             <br>
             <section class="buttons">
-                <button>Blacklog</button>
-                <button>Board</button>
-                <button>Reports</button>
-                <button>Releases</button>
-                <button>Componets</button>
-                <button>Issues</button>
-                <button>Repository</button>
-                <button>Add item</button>
-                <button>Settings</button>
+                <button><img src="img/back.png" alt="">Blacklog</button>
+                <button><img src="img/web.png" alt="">Board</button>
+                <button><img src="img/reports.png" alt="">Reports</button>
+                <button><img src="img/avion.png" alt="">Releases</button>
+                <button><img src="img/pieza.png" alt="">Componets</button>
+                <button><img src="img/asunto.png" alt="">Issues</button>
+                <button><img src="img/codigo.png" alt="">Repository</button>
+                <button><img src="img/archivo.png" alt="">Add item</button>
+                <button><img src="img/conf.png" alt="">Settings</button>
             </section>
         </section>
     </div>
@@ -46,8 +46,12 @@
     <main>
         <header>
             <h1>Board</h1>
+            <nav class="btn-container">
+                <button class="btn1">Release</button>
+                <p>. . .</p>
+            </nav>
             <input class="search" placeholder="🔍">
-            <input type="list" placeholder="Quick Filtters &nbsp; &#9660;" style="border: none;"></input>
+            <input class="list" placeholder="Quick Filtters &nbsp; &#9660;" style="border: none;"></input>
         </header>
 
         <section class="board">
@@ -56,18 +60,22 @@
                 <article class="card">
                     <p>Engage Jupiter Express for outer solar system travel</p>
                     <p class="suby">SPACE TRAVEL PARTNERS</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">5</span></p>
                 </article>
                 <article class="card">
                     <p>Create 90 day plans for all departaments in the Mars Office</p>
                     <p class="subo">Local Mars Office</p>
+                    <p class="num"><img src="img/prohibido.png"><span class="num-text">9</span></p>
                 </article>
                 <article class="card">
                     <p>Engage Saturn's Rings Resort as a preferred provider</p>
                     <p class="suby">SPACE TRAVEL PARTNERS</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">3</span></p>
                 </article>
                 <article class="card">
                     <p>Speedy SpaceCraft as the prederred</p> 
                     <p class="subc">SEESPACEEZ PLUS</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">3</span></p>
                 </article>
             </section>
 
@@ -76,18 +84,22 @@
                 <article class="card">
                     <p>Requesting avaliable flights is now taking > 5 seconds</p>
                     <p class="subc">SEESPACEEZ PLUS</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">3</span></p>
                 </article>
                 <article class="card">
                     <p>Engage Saturn Shuttle Lines for group tours</p>
                     <p class="suby">SPACE TRAVEL PARTNERS</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">4</span></p>
                 </article>
                 <article class="card">
                     <p>Establish a catering vendor to preovide meal service</p>
                     <p class="subo">Local Mars Office</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">4</span></p>
                 </article>
                 <article class="card">
                     <p>Engage Saturn Shuttle Lines for group tours</p>
                     <p class="suby">SPACE TRAVEL PARTNERS</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">4</span></p>
                 </article>
             </section>
 
@@ -96,10 +108,12 @@
                 <article class="card">
                     <p>Register with the Mars Ministry of Revenue</p>
                     <p class="subo">Local Mars Office</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">3</span></p>
                 </article>
                 <article class="card">
                     <p>Draft network plan for Mars Office</p> 
                     <p class="subo">Local Mars Office</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">3</span></p>
                 </article>
             </section>
 
@@ -108,22 +122,27 @@
                 <article class="card">
                     <p>Homepage footer uses an inline style-should use a class</p>
                     <p class="subp" style="color: white;">Large Team Support</p>
+                    <p class="num"><img src="img/arriba.png"></p>
                 </article>
                 <article class="card">
                     <p>Engage JetShuttle SpaceWays for travel</p>
                     <p class="suby">SPACE TRAVEL PARTNERS</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">5</span></p>
                 </article>
                 <article class="card">
                     <p>Engage Saturn Shuttle Lines for group tours</p>
                     <p class="suby">SPACE TRAVEL PARTNERS</p>
+                    <p class="num"><img src="img/flecha.png"></p>
                 </article>
                 <article class="card">
                     <p>Establish a catering vendor to provide meal service</p>
                     <p class="subo">Local Mars Office</p>
+                    <p class="num"><img src="img/arriba.png"><span class="num-text">5</span></p>
                 </article>
             </section>
         </section>
     </main>
 
 </body>
+<script src="index.js"></script>
 </html>

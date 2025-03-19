@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: brown;
+    margin: 0;
+}
+
+main {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 280px;
+}
+
+input {
+    width: 90%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+    outline: none;
+    background: rgb(228, 225, 225);
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    border-color: #e7e7e7;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(5, 60px);
+    gap: 10px;
+}
+
+button {
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #444;
+    color: white;
+    border-color: #e7e7e7;
+}
+
+
+
+#btn-limpiar {
+    background: #dc3545;
+}
+
+#btn-limpiar:hover {
+    background: #c82333;
+}
+
+.operador {
+    background: #447cff;
+}
+
+.operador:hover {
+    background: #0244de;
+}
+
+#btn-igual {
+    background: #28a745;
+    grid-column: 4; 
+    grid-row: 4 / span 2;  
+}
+
+#btn-igual:hover {
+    background: #218838;
+}
+
+#btn-0 {
+    grid-column: span 2;  
+}

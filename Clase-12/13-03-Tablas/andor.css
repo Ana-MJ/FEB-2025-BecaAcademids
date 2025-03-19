@@ -1,0 +1,46 @@
+#All-tables {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+h2{
+    text-align: center;
+} 
+
+h3, table {
+    margin: 0;
+}
+
+h3 {
+    margin-left: 260px ;
+}
+
+table {
+    width: 100%; 
+    max-width: 60%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid brown;
+}
+
+th, td {
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+th {
+    background-color: brown;
+    color:white;
+    text-align: center;
+}
+
+td {
+    text-align: center; 
+}
+
+table.or {
+    border-collapse: separate;
+}

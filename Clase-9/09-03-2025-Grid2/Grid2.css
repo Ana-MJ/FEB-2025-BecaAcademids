@@ -46,12 +46,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #ecebeb;
     width: 245px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    padding: 18px;
     height: 100vh;
+}
+
+.barra-gray h3 {
+    color: black;
+}
+
+.barra-gray p {
+    color: gray;
 }
 
 
@@ -81,15 +85,21 @@ body {
 }
 
 .buttons button {
+    display: flex;
+    gap: 12px;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: none;
     background: #ecebeb;
     color: grey;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    text-align: left;
+    font-size: 16px;
+}
+
+.buttons button img {
+    width: 20px;
+    height: 20px;
 }
 
 .buttons button:hover {
@@ -107,19 +117,35 @@ main {
 
 main header {
     display: grid;
-    grid-template-columns: 200px;
+    grid-template-columns: 1fr auto 800px;
     grid-template-rows: auto;
-    gap: 10px;
+    gap: 30px;
     align-items: center;
     margin-bottom: 20px;
     
 }
 
 main header h1 {
-    font-size: 2em;
+    font-size: 32px;
     grid-column: span 2; /* ocupara 2 columnas */
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
+
+nav.btn-container {
+    grid-column: 3;
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 550px 40px;
+}
+
+
+.btn1 {
+    border: none;
+    text-align: center;
+    padding: 10px;
+    color: rgb(114, 113, 113);
+}
+
 
 main .search {
     background: #ecebeb;
@@ -130,6 +156,7 @@ main .search {
 main header input {
     padding: 10px;
     width: 200px;
+    margin: 0;
 }
 
 /* Tablero */
@@ -159,9 +186,15 @@ h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+.card.dragging {
+    opacity: 0.5;
+}
+
 .card p {
     margin: 5px 0;
     color: black;
+    
 }
 
 .suby {
@@ -185,4 +218,22 @@ h3 {
     font-size: 12px;
     background-color: rgb(123, 0, 255);
     
+}
+
+.card .num {
+    font-size: 15px; 
+    margin-top: 10px; 
+    padding: 0 25px; /* espacio a la derecha */
+}
+
+.card .num img {
+    margin-right: 8px; 
+    width: 14px; 
+    height: 14px; 
+}
+
+.card .num-text {
+    background-color:#cdcccc; 
+    padding: 0 5px; 
+    border-radius: 5px; 
 }

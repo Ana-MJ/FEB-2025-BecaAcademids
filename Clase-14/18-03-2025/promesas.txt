@@ -1,0 +1,182 @@
+Conceptos:
+iterable: objeto que permite recorrer un array y devuelve un valor al terminar.
+Promise-objeto: tipo de dato que representa el resultado o el fracaso de una operación asíncrona.
+asincronia: ejecutar tareas de larga duración mientras se responden a otros eventos, en lugar de tener que esperar hasta que esa tarea haya terminado.
+
+
+# ¿Como se enlazan/encadenan las promesas? =
+Utilizando el metodo (then), cada then devuelve una nueva promesa, lo que permkte encadenar operaciones adicionales a medida que se resuelven las promesas de manera secuancial,
+es util en situaciones donde el resultado de una operacion depende del resultado de una promesa anterior.
+
+Tambien con (await) para esperar que cada promesa se resuelva antes de pasar al siguiente paso y (async) asegura que la función retorne una promesa, 
+al usar try/catch para manejar errores de manera más clara.
+
+(try): bloque se usa para envolver el código que puede lanzar un error, ya que si ocurre un error dentro del bloque try, el flujo de ejecución se interrumpe y el control pasa al bloque catch.
+
+# Beneficions de async/await sobre then/catch:
+    - mas legibilidad (mejor comprension).
+    - manejo de errores (con try/catch para manejar errores de manera mas intuitiva).
+    - menos encadenamiento (evita el problema del "callback hell").
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+Metodos de Instancia:
+- catch()
+descripcion: Se usa para manejar errores, ejecutado cuando una promesa es rechazada y capturar el error.
+ejemplo: 
+const promesa = new Promise((resolve, reject) => {
+  const prueba = false;
+  if (prueba === true) {
+    reject("bien");
+  } else {
+    resolve("mal");
+  }
+});
+
+promesa
+  .then((resultado) => console.log(resultado))
+  .catch((error) => console.log(error));
+
+
+
+- finally()
+descripcion: Se usa para ejecutar código al final de una promesa, independientemente de si fue resuelta o rechazada, es útil para ejecutar código de limpieza o acciones que deben ocurrir después de que la promesa se haya completado.
+ejemplo: 
+const promesa = new Promise((resolve) => {
+  setTimeout(() => resolve("Promesa resuelta"), 5000);
+});
+
+promesa
+  .then((resultado) => console.log(resultado))
+  .catch((error) => console.log(error))
+  .finally(() => {
+    console.log("Ejecutado en finally");
+  });
+
+
+
+- then()
+descripcion: Se usa para manejar el resultado de una promesa cuando se resuelve (si se cumple correctamente).
+ejemplo:
+const promesa = new Promise((resolve) => {
+  setTimeout(() => resolve("Promesa resuelta"), 5000);
+});
+
+promesa
+  .then((resultado) => {
+    console.log(resultado); 
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+Metodos Estaticos:
+   
+- Promise.all()
+descripcion: Devuelve una promesa que termina correctamente cuando todas las promesas en el argumento iterable han sido concluídas con éxito, o bien rechaza la petición.
+ejemplo: 
+const prom1 = Promise.resolve(10);
+const prom2 = Promise.resolve(20);
+const prom3 = Promise.resolve(30);
+                  
+Promise.all([prom1, prom2, prom3])
+.then((resultados) => console.log(resultados))
+.catch((error) => console.log(error));
+    
+
+
+- Promise.allSettled()
+descripcion: Toma un iterable de promesas como entrada y devuelve un único Promise, devuelve un array con el estado y valor de todas las promesas (sin importar si fallan o no.).
+ejemplo: 
+const prom1 = Promise.resolve(10);
+const prom2 = Promise.reject("Error en prom2");
+const prom3 = Promise.resolve(30);
+
+Promise.allSettled([prom1, prom2, prom3])
+.then((resultados) => console.log(resultados));
+    
+
+
+- Promise.any()
+descripcion: Recibe un array de promesas y devuelve una nueva promesa que: se resuelve con el primer valor exitoso y solo falla si todas las promesas son rechazadas.
+ejemplo:
+const prom1 = new Promise((resolve) => setTimeout(() => resolve("Promesa 1"), 1000));
+const prom2 = new Promise((resolve) => setTimeout(() => resolve("Promesa 2"), 500));
+
+Promise.any([prom1, prom2])
+.then((resultado) => console.log("Resultado:", resultado))
+.catch((error) => console.log(error));
+
+
+
+- Promise.race()    
+descripcion: Recibe un array de promesas y devuelve una nueva promesa que: se resuelve o se rechaza con la primera promesa que termine, ya sea éxito o error (solo la mas rapida).
+ejemplo:
+const prom1 = new Promise((resolve) => setTimeout(() => resolve("1"), 1000));
+const prom2 = new Promise((resolve) => setTimeout(() => resolve("2"), 500));
+const prom3 = new Promise((resolve) => setTimeout(() => resolve("3"), 2000));
+
+Promise.race([prom1, prom2, prom3])
+  .then((resultado) => console.log("Resultado:", resultado))
+  .catch((error) => console.log(error));
+
+
+
+- Promise.reject()
+descripcion: Devuelve un (Promise-objeto) que se rechaza por un motivo determinado (forzar, simular un error).
+ejemplo:
+const promesaRechazada = Promise.reject("Salió mal");
+
+promesaRechazada
+  .then((resultado) => console.log("Resultado:", resultado))
+  .catch((error) => console.log(error));
+
+
+
+- Promise.resolve()
+descripcion: Devuelve una promesa resuelta que contiene el valor que se le pase, o una promesa ya resuelta, si se pasa un valor que no es una promesa, Promise.resolve() lo envolverá en una promesa resuelta (crea promesas resueltas apartir de  valores o promesas existentes).
+ejemplo:
+const prom = new Promise((resolve) => setTimeout(() => resolve("Respuesta 2 segundos"), 2000));
+const promesaResuelta = Promise.resolve(prom);
+
+promesaResuelta
+  .then((resultado) => console.log("Resultado:", resultado))
+  .catch((error) => console.log(error));
+
+
+
+- Promise.try()
+descripcion: Toma una devolución de llamaada de cualquier tipo (devoluciones o lanzamientos, de forma sincrónica o asincrónica) y envuelve su resultado en un Promise.
+ejemplo:
+function promiseTry(callback) {
+  return Promise.resolve().then(callback);
+}
+
+promiseTry(() => {
+  return "Ejecutado correctamente";
+})
+
+  .then((resultado) => console.log(resultado))
+  .catch((error) => console.log(error));
+
+
+
+- Promise.withResolvers()
+descripcion: Devuelve un objeto que contiene un nuevo (Promise-objeto) y dos funciones para resolverlo o rechazarlo, correspondientes a los dos parámetros pasados ​​al ejecutor del Promise (resolve() y reject()).
+ejemplo:
+function createPromiseWithResolvers() {
+  return new Promise((resolve, reject) => {
+    return { resolve, reject };
+  });
+}
+const { resolve, reject } = createPromiseWithResolvers();
+
+setTimeout(() => {
+  resolve("Si se cumplio");
+}, 2000);

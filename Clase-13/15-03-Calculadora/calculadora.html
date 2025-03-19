@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <main>
+        <input type="text" id="contenedor" readonly>
+        <section>
+            <!-- Fila 1 -->
+            <button id="btn-limpiar" onclick="limpiar()">C</button>
+            <button class="operador" onclick="agregar('/')">/</button>
+            <button class="operador" onclick="agregar('*')">*</button>
+            <button class="operador" onclick="agregar('%')">%</button>
+
+            <!-- Fila 2 -->
+            <button onclick="agregar('7')">7</button>
+            <button onclick="agregar('8')">8</button>
+            <button onclick="agregar('9')">9</button>
+            <button class="operador" onclick="agregar('-')">−</button>
+
+            <!-- Fila 3-->
+            <button onclick="agregar('4')">4</button>
+            <button onclick="agregar('5')">5</button>
+            <button onclick="agregar('6')">6</button>
+            <button class="operador" onclick="agregar('+')">+</button>
+
+            <!-- Fila 4 -->
+            <button onclick="agregar('1')">1</button>
+            <button onclick="agregar('2')">2</button>
+            <button onclick="agregar('3')">3</button>
+            <button id="btn-igual">=</button>
+
+            <!-- Fila 5 -->
+            <button id="btn-0" onclick="agregar('0')">0</button>
+            <button onclick="agregar('.')">.</button>
+            
+        </section>
+    </main>
+</body>
+<script src="calculadora.js"></script>
+</html>
